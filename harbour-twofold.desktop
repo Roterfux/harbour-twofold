@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Application
+Name=Twofold
+Comment=Two-factor authentication codes, Aegis compatible
+Icon=harbour-twofold
+Exec=sailfish-qml harbour-twofold
+X-Nemo-Application-Type=silica-qt5
+
+[X-Sailjail]
+# Off: the sandbox blocks polkit, which fingerprint unlock asks (the user chose this).
+# The permissions below stay as the list of what the app needs.
+Sandboxing=Disabled
+OrganizationName=harbour
+ApplicationName=twofold
+# No Internet: the codes are computed on the phone.
+# Documents, Downloads, RemovableMedia: pick an Aegis export to import;
+#           the vault export is written to Documents.
+# Camera: scan QR codes. Pictures, MediaIndexing: pick a picture (screenshot) with a QR code.
+Permissions=Documents;Downloads;RemovableMedia;Camera;Pictures;MediaIndexing

@@ -1,0 +1,4 @@
+RPMS/
+__pycache__/
+*.pyc
+tests/ui-out/
